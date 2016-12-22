@@ -1,0 +1,19 @@
+{
+  "name": "aesset",
+  "version": "1.0.0",
+  "description": "AESSET desktop application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IshaTr/AESSET-desktop.git"
+  },
+  "author": "Isha Thakur, Punit Grover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IshaTr/AESSET-desktop/issues"
+  },
+  "homepage": "https://github.com/IshaTr/AESSET-desktop#readme"
+}
