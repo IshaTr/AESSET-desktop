@@ -4,13 +4,24 @@
   "description": "AESSET desktop application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "electron-packager .",
+    "package-all": "electron-packager . --platform=all --arch=all",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IshaTr/AESSET-desktop.git"
   },
   "author": "Isha Thakur, Punit Grover",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "devtron": "^1.3.0",
+    "electron": "^1.4.3",
+    "electron-packager": "^8.1.0",
+    "spectron": "^3.4.0",
+    "standard": "^8.4.0"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/IshaTr/AESSET-desktop/issues"
