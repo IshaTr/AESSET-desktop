@@ -13,4 +13,4 @@ npm start
 ``` 
 
 #### Note:
-If you are getting an error like `rror: ENOENT: no such file or directory, open 'AESSET-desktop/node_modules/electron/path.txt'` then, go to `/node_modules/electron/path.txt` and run `node install.js`
+If you are getting an error like `error: ENOENT: no such file or directory, open 'AESSET-desktop/node_modules/electron/path.txt'` then, go to `/node_modules/electron/path.txt` and run `node install.js`
