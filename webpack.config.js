@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: [
-        './index.js'
-    ],
+    entry: {
+        app: ['webpack/hot/dev-server', './index.js']
+    },
     output: {
         path: __dirname + '/dist',
         filename: "bundle.js",
@@ -23,6 +23,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$"))
+  ]
 }

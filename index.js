@@ -5,7 +5,7 @@ var Entry = React.createClass({
   render: function(){
     return (
       <div className="myDiv">
-        Hello Electron! Pasta Hello
+        Hello ljljlbhjbhjbjbbjb! ahbhdv Pasta Hello
       </div>
     )
   }

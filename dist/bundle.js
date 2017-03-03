@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e09db1bbc1073b192254"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "dc9b35dfcb7e494561f5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1666,7 +1666,7 @@ eval("/**\n * Copyright 2013-present, Facebook, Inc.\n * All rights reserved.\n 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar React = __webpack_require__(/*! react */ 177);\nvar ReactDOM = __webpack_require__(/*! react-dom */ 94);\n\nvar Entry = React.createClass({\n  displayName: 'Entry',\n\n  render: function render() {\n    return React.createElement(\n      'div',\n      { className: 'myDiv' },\n      'Hello Electron! Pasta Hello hgahga bfhjebf'\n    );\n  }\n});\n\nReactDOM.render(React.createElement(Entry, null), document.getElementById('content'));//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNzkuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vaW5kZXguanM/MTY4NyJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpO1xudmFyIFJlYWN0RE9NID0gcmVxdWlyZSgncmVhY3QtZG9tJyk7XG5cbnZhciBFbnRyeSA9IFJlYWN0LmNyZWF0ZUNsYXNzKHtcbiAgcmVuZGVyOiBmdW5jdGlvbigpe1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm15RGl2XCI+XG4gICAgICAgIEhlbGxvIEVsZWN0cm9uISBQYXN0YSBIZWxsbyBoZ2FoZ2EgYmZoamViZlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59KTtcblxuUmVhY3RET00ucmVuZGVyKDxFbnRyeSAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbnRlbnQnKSk7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGluZGV4LmpzIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUlBO0FBUEE7QUFDQTtBQVNBIiwic291cmNlUm9vdCI6IiJ9");
+eval("\n\nvar React = __webpack_require__(/*! react */ 177);\nvar ReactDOM = __webpack_require__(/*! react-dom */ 94);\n\nvar Entry = React.createClass({\n  displayName: 'Entry',\n\n  render: function render() {\n    return React.createElement(\n      'div',\n      { className: 'myDiv' },\n      'Hello Electrdsvdflkjlkjljlon! Pasta Hello'\n    );\n  }\n});\n\nReactDOM.render(React.createElement(Entry, null), document.getElementById('content'));//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNzkuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vaW5kZXguanM/MTY4NyJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpO1xudmFyIFJlYWN0RE9NID0gcmVxdWlyZSgncmVhY3QtZG9tJyk7XG5cbnZhciBFbnRyeSA9IFJlYWN0LmNyZWF0ZUNsYXNzKHtcbiAgcmVuZGVyOiBmdW5jdGlvbigpe1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm15RGl2XCI+XG4gICAgICAgIEhlbGxvIEVsZWN0cmRzdmRmbGtqbGtqbGpsb24hIFBhc3RhIEhlbGxvXG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn0pO1xuXG5SZWFjdERPTS5yZW5kZXIoPEVudHJ5IC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY29udGVudCcpKTtcblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gaW5kZXguanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBSUE7QUFQQTtBQUNBO0FBU0EiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ }),
 /* 80 */
