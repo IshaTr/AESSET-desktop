@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import ReactDOM 'react-dom';
+import ReactDOM from 'react-dom';
 
 class Entry extends Component{
-    render(
+    render() {
         return(
             <div className="content-wrapper">
                 <div className="content">
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="">
+                                <img src="./static/image/darth.jpg" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
                             <div className="person">
-                                <span className="person__name">John Doe</span><br>
+                                <span className="person__name">John Doe</span>
                                 <span className="person__ID">System ID</span>
                             </div>
                         </div>                
@@ -42,7 +42,7 @@ class Entry extends Component{
                 </div>
             </div>
         );
-    );
+    }
 }
 
 ReactDOM.render(<Entry />, document.querySelector('.content'));
