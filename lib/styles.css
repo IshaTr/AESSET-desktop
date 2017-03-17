@@ -11,6 +11,7 @@ body{
 }
 
 .content-wrapper{
+    width: 100;
     padding: 80px;
     padding-left: 160px;
     border: 1px solid e0e0e0;
@@ -74,7 +75,6 @@ body{
 
 .person-status {
     width: 49px;
-    height: 100px;
     float: left;
     position: relative;
 }
@@ -155,6 +155,43 @@ body{
     color: #757575;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+/*side-nav*/
+.side-nav {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 3px 3px 15px 10px rgba(0, 0, 0, 0.1);
+    float: left;
+    min-height: 678px;
+    height: 856px;
+    max-height: 1800px;
+    width: 80px;
+    position: absolute;
+    background-color: #fff;
+}
+
+.nav__dashboard {
+    margin-top: 250px;
+}
+
+.nav__dashboard, .nav__resolved-query, .nav__unresolved-query {
+    height: 80px;
+    width: 80px;
+    position: relative;
+}
+
+.material-icons.md-42 { 
+    font-size: 42px; 
+}
+
+.icons {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #757575;
+}
 
 
 

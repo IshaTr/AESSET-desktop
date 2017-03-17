@@ -6,9 +6,21 @@
     <title>Html</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <title>Query manager</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
+    <div class="side-nav">
+        <div class="nav__dashboard">
+            <a href=""><i class="material-icons md-42 Grey500 icons">library_books</i></a>
+        </div>
+        <div class="nav__resolved-query">
+            <a href=""><i class="material-icons md-42 Grey500 icons">check_circle</i></a>
+        </div>
+        <div class="nav__unresolved-query">
+            <a href=""><i class="material-icons md-42 Grey500 icons">error</i></a>
+        </div>
+    </div>
     <div class="content-wrapper">
         <div class="content">
             <div class="content__person">
@@ -221,8 +233,7 @@
             </div>
         </div>
     </div>
+    <script src="http://localhost:8080/webpack-dev-server.js"></script>
+    <script src="http://localhost:8080/dist/bundle.js"></script>
 </body>
-</html>
-
-
-
+</html>s
