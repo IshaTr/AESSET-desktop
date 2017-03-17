@@ -4,6 +4,9 @@ export default class SideNav extends Component {
     render() {
         return (
             <div>
+                <div className="nav__add-query">
+                    <a href=""><i className="material-icons md-42 Grey500 icons">add_circle</i></a>
+                </div>
                 <div className="nav__dashboard">
                     <a href=""><i className="material-icons md-42 Grey500 icons">library_books</i></a>
                 </div>
@@ -11,7 +14,7 @@ export default class SideNav extends Component {
                     <a href=""><i className="material-icons md-42 Grey500 icons">check_circle</i></a>
                 </div>
                 <div className="nav__unresolved-query">
-                    <a href=""><i className="material-icons md-42 Grey500 icons">error</i></a>
+                    <a href=""><i className="material-icons md-42 Grey500 icons">clear</i></a>
                 </div>
             </div>
         );
