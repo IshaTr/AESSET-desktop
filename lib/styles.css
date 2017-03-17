@@ -22,7 +22,7 @@ body{
     background-color: #e0e0e0;
 }
 
-.content {
+.content-item {
     box-shadow: -3px 20px 7px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #eeeeee;
     border-radius: 5px;
@@ -191,6 +191,45 @@ button:hover {
     margin-left: 20px;
     margin-top: 20px;
     color: #757575;
+}
+
+@media (max-width: 800px) {
+    html, body {
+        padding: 0px;
+        background: none;
+        margin:0px;
+        min-height: 1000px;
+    }
+
+    .content-wrapper {
+        border-radius: 0px;
+        min-height: 1000px;
+    }
+
+}
+
+@media (max-width: 556px) {
+    .content-wrapper {
+        min-height: 2100px;
+    }
+}
+
+@media (min-width: 801px) {
+    .content-wrapper {
+        min-height: 2100px; 
+    }
+}
+
+@media (min-width: 956px) {
+    .content-wrapper {
+        min-height: 1100px;
+    }
+}
+
+@media (min-width: 1057px) {
+    .content-wrapper {
+        min-height: 800px;
+    }
 }
 
 
