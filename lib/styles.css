@@ -19,11 +19,11 @@ body{
     max-height: 1800px;
     border-radius: 20px;
     padding-bottom: 100px;
-    background-color: #e0e0e0;
+    background-color: #fafbfc;
 }
 
 .content-item {
-    box-shadow: -3px 20px 7px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 20px 5px rgba(0,0,0,0.26);
     border: 1px solid #eeeeee;
     border-radius: 5px;
     width: 225px;
@@ -163,7 +163,7 @@ button:hover {
 .side-nav {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    box-shadow: 3px 3px 15px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.26);
     float: left;
     min-height: 678px;
     height: 856px;
@@ -173,11 +173,11 @@ button:hover {
     background-color: #fff;
 }
 
-.nav__dashboard {
-    margin-top: 250px;
+.nav__add-query {
+    margin-top: 20px;
 }
 
-.nav__dashboard, .nav__resolved-query, .nav__unresolved-query {
+.nav__dashboard, .nav__resolved-query, .nav__unresolved-query, .nav__add-query {
     height: 80px;
     width: 80px;
     position: relative;
@@ -201,6 +201,12 @@ button:hover {
         min-height: 1000px;
     }
 
+    .side-nav {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        min-height: 1180px;
+    }
+
     .content-wrapper {
         border-radius: 0px;
         min-height: 1000px;
@@ -209,26 +215,46 @@ button:hover {
 }
 
 @media (max-width: 556px) {
+    .side-nav {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        min-height: 2280px;
+    }
+
     .content-wrapper {
         min-height: 2100px;
     }
 }
 
 @media (min-width: 801px) {
-    .content-wrapper {
+    .content-wrapper{
         min-height: 2100px; 
+    }
+    
+    .side-nav {
+        min-height: 1280px;
     }
 }
 
 @media (min-width: 956px) {
+    body {
+        padding-left: 100px;
+    }
     .content-wrapper {
         min-height: 1100px;
     }
 }
 
 @media (min-width: 1057px) {
+    body {
+        padding-left: 100px;
+    }
     .content-wrapper {
         min-height: 800px;
+    }
+
+    .side-nav {
+        min-height: 980px;
     }
 }
 

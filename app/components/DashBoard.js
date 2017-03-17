@@ -13,12 +13,18 @@ export default class DashBoard extends Component {
     }
     render() {
         return (
+<<<<<<< HEAD
             <div onLoad={this.getQueries}>
                 <div className="content-item">
+=======
+            <div>
+            
+                <div className="content-item" onClick={this.queryForm}>
+>>>>>>> 707b8e1537751a59a3c67bb5ea0bc928f88830cd
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
@@ -53,7 +59,7 @@ export default class DashBoard extends Component {
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
@@ -88,7 +94,7 @@ export default class DashBoard extends Component {
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
@@ -123,7 +129,7 @@ export default class DashBoard extends Component {
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
@@ -158,7 +164,7 @@ export default class DashBoard extends Component {
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
@@ -193,7 +199,7 @@ export default class DashBoard extends Component {
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
-                                <img src="./static/image/darth.jpg" alt="" />
+                                <img src="./static/image/person-icon-8.png" alt="" />
                             </div>
                         </div>
                         <div className="person-name">
