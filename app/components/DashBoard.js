@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-class Entry extends Component{
+export default class DashBoard extends Component {
     render() {
-        return(
-            <div className="content-wrapper">
+        return (
+            <div>
+            
                 <div className="content-item">
                     <div className="content__person">
                         <div className="person-image">
@@ -219,5 +219,3 @@ class Entry extends Component{
         );
     }
 }
-
-ReactDOM.render(<Entry />, document.querySelector('.content'));
