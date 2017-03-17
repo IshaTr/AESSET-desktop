@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class DashBoard extends Component {
+    getQueries = () => {
+        axios.get(`http://localhost:8000/querylist/`)
+            .then(response = () =>  {
+                console.log(response.data);
+            })
+            .catch(function (errors) {
+                console.log(errors);
+            });
+    }
     render() {
         return (
-            <div>
-            
+            <div onLoad={this.getQueries}>
                 <div className="content-item">
                     <div className="content__person">
                         <div className="person-image">
@@ -15,7 +24,7 @@ export default class DashBoard extends Component {
                         <div className="person-name">
                             <div className="person">
                                 <span className="person__name">John Doe</span>
-                                <span className="person__ID">System ID</span>
+                                <span className="person__ID">ABC</span>
                             </div>
                         </div>                
                     </div>

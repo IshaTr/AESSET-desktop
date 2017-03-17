@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-
 module.exports = {
     entry: {
         app: ['webpack/hot/dev-server', './app/index.js']
@@ -24,6 +23,7 @@ module.exports = {
     },
     plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$"))
+    new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$")),
+    new webpack.DefinePlugin({'BASE_URL': 'http://localhost:8000'})
   ]
 }
