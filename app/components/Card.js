@@ -4,7 +4,7 @@ export default class Card extends Component {
     render() {
         return (
             <div>
-                <div className="content-item" onClick={this.queryForm} key= { this.props.data.token_id }>
+                <div className="content-item" onClick={this.queryForm}>
                     <div className="content__person">
                         <div className="person-image">
                             <div className="image">
@@ -19,7 +19,7 @@ export default class Card extends Component {
                         </div>                
                     </div>
                     <div className="content__query">
-                        <h4>{ this.props.data.query_type }</h4>
+                        <h4>{ this.props.data.query_type_value }</h4>
                         <div className="query__text">{ this.props.data.description }</div>
                     </div>
                     <div className="content__footer">
