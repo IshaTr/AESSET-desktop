@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Card from './Card';
 
 export default class DashBoard extends Component {
     constructor(props) {
@@ -23,41 +24,7 @@ export default class DashBoard extends Component {
         const { data } = this.state;
         if (data.length) {
             return data.map(card => (
-                <div className="content-item" onClick={this.queryForm}>
-                    <div className="content__person">
-                        <div className="person-image">
-                            <div className="image">
-                                <img src="./static/image/person-icon-8.png" alt="" />
-                            </div>
-                        </div>
-                        <div className="person-name">
-                            <div className="person">
-                                <span className="person__name">John Doe</span>
-                                <span className="person__ID">{  card.student }</span>
-                            </div>
-                        </div>                
-                    </div>
-                    <div className="content__query">
-                        <h4>{ card.query_type }</h4>
-                        <div className="query__text">{ card.description }</div>
-                    </div>
-                    <div className="content__footer">
-                        <div className="footer__button">
-                            <button className="status-button" type="submit">
-                                <div className="person-status">
-                                    <i className="material-icons md-32 greenA400 icon">check_circle</i>
-                                </div>
-                            </button>
-                        </div>
-                        <div className="footer__button">
-                            <button className="status-button" type="submit">
-                                <div className="person-status">
-                                    <i className="material-icons md-32 Orange500 icon">error</i>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <Card data={card} key={card.token_id} />
             ));
         }
 
