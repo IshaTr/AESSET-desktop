@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Card from './Card';
+import Filter from './Filter';
 
 export default class DashBoard extends Component {
     constructor(props) {
