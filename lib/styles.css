@@ -63,7 +63,8 @@ body{
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .person-name {
@@ -193,10 +194,17 @@ button:hover {
     color: #757575;
 }
 
-/*filter */
+/*Filter dropdown content*/
 
-.filter__button {
-    background-color: 
+.filter-dropdown {
+    padding: 20px;
+    display: block;
+}
+
+.dropbtn {
+    border-radius: 5px;
+    margin: auto 15px auto auto;
+    background-color: #039BE5;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -204,12 +212,12 @@ button:hover {
     cursor: pointer;
 }
 
-.filter-container {
+.dropdown {
     position: relative;
     display: inline-block;
 }
 
-.container__content {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -218,23 +226,44 @@ button:hover {
     z-index: 1;
 }
 
-.container__content a {
+.dropdown-content a {
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: black;
+    font-family: sans-serif;
+    color: #757575;
 }
 
-.container__content a:hover {
-    background-color: #f1f1f1;
+.dropdown-content a:hover {
+    background-color: #757575;
+    color: #fff;
+    transition: 0.3s ease-in-out;
 }
 
-.filter-container:hover .container__content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.filter-container:hover .filter__button {
-    background-color: #424242;
+.dropdown:hover .dropbtn {
+    background-color: #01579B;
+    transition: 0.3s ease-in-out;
+}
+
+.filter__button {
+    border-radius: 5px;
+    background-color: #039BE5;
+    margin-right: 50px;
+    padding: 16px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.filter__button:hover {
+    background-color: #01579B;
+    transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 800px) {
