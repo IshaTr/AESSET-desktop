@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SideNav from './SideNav';
 import DashBoard from './DashBoard';
+import Report from './Report';
 
 export default class App extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class App extends Component {
                     <SideNav />
                 </div>
                 <div className="content-wrapper">
-                    <DashBoard />
+                    <Report />
                 </div>
             </div>
         );
