@@ -5,34 +5,52 @@ export default class Report extends Component {
     render() {
         return (
             <div className="report-container">
-                <div className="filter-dropdown">
-                    <div className="dropdown">
-                        <button className="dropbtn">Query Type</button>
-                            <div className="dropdown-content">
-                                <a href="#">Result Discrepancy</a>
-                                <a href="#">Credit Discrepancy</a>
-                                <a href="#">Issue of PDC</a>
-                                <a href="#">Issue of other documents</a>
-                            </div>
-                    </div>
-                    <div className="dropdown">
-                        <button className="dropbtn">Status</button>
-                        <div className="dropdown-content">
-                            <a href="#">Resolved</a>
-                            <a href="#">Unresolved</a>
+                <div class="filter-dropdown">
+                    <div class="dropdown">
+                        <div class="styled-select blue semi-square">
+                            <select>
+                                <option>Select Query type</option>
+                                <option>Result Discrepancy</option>
+                                <option>Credit Discrepancy</option>
+                                <option>Issue of PDC</option>
+                                <option>Issue of other documents</option>
+                            </select>
                         </div>
                     </div>
-                    <div className="dropdown">
-                        <button className="dropbtn">Year</button>
-                        <div className="dropdown-content">
-                            <a href="#">1st</a>
-                            <a href="#">2nd</a>
-                            <a href="#">3rd</a>
-                            <a href="#">4th</a>
+                    <div class="dropdown">
+                        <div class="styled-select blue semi-square">
+                            <select>
+                                <option>Status</option>
+                                <option>Resolved</option>
+                                <option>Unresolved</option>
+                            </select>
                         </div>
                     </div>
-                    <div className="dropdown">
-                        <button className="filter__button">Save</button>
+                    <div class="dropdown">
+                        <div class="styled-select blue semi-square">
+                            <select>
+                                <option>Select Year</option>
+                                <option>1st</option>
+                                <option>2nd</option>
+                                <option>3rd</option>
+                                <option>4th</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="styled-select blue semi-square">
+                            <select>
+                                <option>1st</option>
+                                <option>2nd</option>
+                                <option>3rd</option>
+                                <option>4th</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="styled-select blue semi-square">
+                            <button class="filter__button">Save</button>
+                        </div>
                     </div>
                 </div>
             </div>
