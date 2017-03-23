@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
+import routes from './routes';
 
-ReactDOM.render(<App />, document.querySelector('.content'));
+render(
+    <Router history={hashHistory} routes={routes} />,
+    document.querySelector('.content'));

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import SideNav from './SideNav';
-import DashBoard from './DashBoard';
-import Report from './Report';
 
 export default class App extends Component {
     render() {
@@ -10,10 +8,12 @@ export default class App extends Component {
                 <div className="side-nav">
                     <SideNav />
                 </div>
-                <div className="content-wrapper">
-                    <Report />
-                </div>
+                {this.props.children}
             </div>
         );
     }
 }
+
+App.propTypes = {
+    children: React.PropTypes.object
+};
