@@ -8,8 +8,8 @@ body{
 }
 
 .content-wrapper{
-    width: 100;
-    padding-left: 160px;
+    width: 100%;
+    padding-left: 100px;
     padding-top: 80px;
     border: 1px solid e0e0e0;
     min-height: 678px;
@@ -190,9 +190,17 @@ button:hover {
 
 /*Filter dropdown content*/
 
+.filter-dropdown {
+    background-color: #f4f8f9;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-left: 5px;
+    
+    text-align: center;
+    /*float: left;*/
 }
 
 .semi-square {
@@ -206,13 +214,14 @@ button:hover {
 }
 
 .styled-select select {
+   margin: 10px;
    background: #039BE5;
    border: none;
    border-radius: 5px;
    font-size: 14px;
    height: 45px;
    padding: 5px; 
-   width: 150px;
+   max-width: 150px;
 }
 
 .styled-select select:hover {
@@ -242,7 +251,51 @@ button:hover {
     transition: 0.3s ease-in-out;
 }
 
-/*end of filter-dropdown content*/
+/*Table*/
+
+.Table
+    {
+        font-size: 14px;
+        display: table;
+        border: none;
+        background-color: #f4f8f9;
+        padding: 10px;
+        padding-top: 50px;
+        font-family: sans-serif;
+    }
+
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: left;
+        color: #9CA0A1;
+    }
+
+    .Row
+    {
+        display: table-row;
+        background-color: #fafbfc;
+    }
+
+    .Cell
+    {
+        text-align: left;
+        width: 300px;
+        display: table-cell;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #9CA0A1;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .Cell p {
+        color: #757E83;
+    }
+
+/*End of table*/
 
 @media (max-width: 800px) {
     html, body {

@@ -53,6 +53,139 @@ export default class Report extends Component {
                         </div>
                     </div>
                 </div>
+                <div class="Table">
+                    <div class="Heading">
+                        <div class="Cell">
+                            <p>System ID</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Query Type</p>
+                        </div>
+                        <div class="Cell">
+                            <p>E-mail</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Phone</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Department</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Year</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Status</p>
+                        </div>
+                        <div class="Cell">
+                            <p>Description</p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>abc</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>          
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>          
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>          
+                        <div class="Cell">
+                            <p>xyz@xyz.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
