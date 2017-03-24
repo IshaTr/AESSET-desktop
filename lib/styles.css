@@ -4,10 +4,7 @@ body{
     font-family: sans-serif;
     color: #424242;
     letter-spacing: 0.4px;
-    background: url("./static/image/whale_illustration.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: #fff;
 }
 
 .content-wrapper{
@@ -164,13 +161,14 @@ button:hover {
 .side-nav {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border-left: 1px solid #e0e0e0;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.26);
     float: left;
     min-height: 678px;
-    height: 856px;
+    height: 100%;
     max-height: 1800px;
     width: 80px;
-    position: absolute;
+    position: fixed;
     background-color: #fff;
 }
 
@@ -290,6 +288,7 @@ button:hover {
     
     .side-nav {
         min-height: 1280px;
+        position: absolute;
     }
 }
 
@@ -312,6 +311,7 @@ button:hover {
 
     .side-nav {
         min-height: 980px;
+        position: absolute;
     }
 }
 
