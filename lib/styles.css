@@ -8,8 +8,9 @@ body{
 }
 
 .content-wrapper{
-    width: 100%;
-    padding-left: 100px;
+    max-width: 1200px;
+    padding: 20px;
+    padding-left: 140px;
     padding-top: 80px;
     border: 1px solid e0e0e0;
     min-height: 678px;
@@ -395,19 +396,6 @@ button:hover {
     }
 }
 
-@media (min-width: 956px) {
-
-    .content-wrapper {
-        min-height: 1100px;
-    }
-}
-
-@media (min-width: 1057px) {
-
-    .content-wrapper {
-        min-height: 800px;
-    }
-}
 
 .Rtable-cell-1 {
     order: 1;
