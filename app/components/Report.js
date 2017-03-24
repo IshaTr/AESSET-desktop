@@ -1,77 +1,115 @@
 import React, {Component} from 'react';
-import Filter from './Filter';
+import axios from 'axios';
+import ListItem from './ListItem';
+
+let today = new Date().toISOString().slice(0, 10);
 
 export default class Report extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            query_type: undefined,
+            status: undefined,
+            department: undefined,
+            status: undefined,
+            date: today,
+            data: []
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    onFilter = () => {
+        const params = {};
+        Object.keys(this.state).forEach((item) => {
+            if (item !== "data" && this.state[item]) {
+                params[item] = this.state[item];
+            }
+        });
+
+        axios.get(`http://localhost:8000/querylist/`,{
+            params
+        })
+            .then(response => {
+                this.setState({data: response.data});
+                console.log(...(response.data));
+            })
+            .catch(function (errors) {
+                console.log(errors);
+            });
+    }
+
+    rendeResult = () => {
+        const { data } = this.state;
+        if (data) {
+            return data.map(query => (
+                <ListItem data={query} key={query.token_id} />
+            ));
+        }
+        return null;
+    }
+
     render() {
         return (
             <div className="report-container content-wrapper">
                 <div className="filter-dropdown">
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select>
-                                <option>Select Query type</option>
-                                <option>Result Discrepancy</option>
-                                <option>Credit Discrepancy</option>
-                                <option>Issue of PDC</option>
-                                <option>Issue of other documents</option>
+                            <select name="query_type" value={this.state.query_type} onChange={this.handleChange}>
+                                <option value={undefined}>Select Query type</option>
+                                <option value="result">Result Discrepancy</option>
+                                <option value="credit">Credit Discrepancy</option>
+                                <option value="pdc_issue">Issue of PDC</option>
+                                <option value="other_certificate">Issue of other documents</option>
                             </select>
                         </div>
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select>
-                                <option>Status</option>
-                                <option>Resolved</option>
-                                <option>Unresolved</option>
+                            <select name="status" value={this.state.status} onChange={this.handleChange}>
+                                <option value="status">Status</option>
+                                <option value="resolved">Resolved</option>
+                                <option value="unresolved">Unresolved</option>
                             </select>
                         </div>
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select>
+                            <select value={this.state.department} onChange={this.handleChange}>
                                 <option>Select Department</option>
-                                <option>CSE</option>
-                                <option>ME</option>
-                                <option>CE</option>
-                                <option>EEE</option>
-                                <option>ECE</option>
-                                <option>BioTech</option>
+                                <option value="CSE">CSE</option>
+                                <option value="ME">ME</option>
+                                <option value="CE">CE</option>
+                                <option value="EEE">EEE</option>
+                                <option value="ECE">ECE</option>
+                                <option value="BioTech">BioTech</option>
                             </select>
                         </div>
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select>
+                            <select value={this.state.year} onChange={this.handleChange}>
                                 <option>Select Year</option>
-                                <option>1st</option>
-                                <option>2nd</option>
-                                <option>3rd</option>
-                                <option>4th</option>
+                                <option value="1">1st</option>
+                                <option value="2">2nd</option>
+                                <option value="3">3rd</option>
+                                <option value="4">4th</option>
                             </select>
                         </div>
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <button className="filter__button">Save</button>
+                            <button className="filter__button" onClick={this.onFilter}>Save</button>
                         </div>
                     </div>
                 </div>
-                <div className="Rtable Rtable--3cols">
-                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
-                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
-                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
-                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
 
-                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
-                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
-                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
-                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
-
-                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
-                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
-                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
-                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
-                </div>
+                {this.rendeResult()}
             </div>
         );
     }

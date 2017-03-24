@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { stringify } from 'querystring';
+import { hashHistory } from 'react-router';
 
 export default class QueryForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
             student: '',
-            query_type: 'result',
+            query_type: undefined,
             email: '',
             phone: '',
             department: '',
@@ -44,7 +44,7 @@ export default class QueryForm extends Component {
         .catch((error) => {
             console.log(error);
         });
-
+        hashHistory.push('/');
     }
 
     render() {
