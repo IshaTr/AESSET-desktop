@@ -302,10 +302,65 @@ button:hover {
 
 /*Query Form*/
 
-.form-container input {
-    border: none;
-
+.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
+
+.form-container input {
+    background: #fafbfc;
+    border: 1px solid #e7e7e7;
+    margin: 13px auto;
+    padding: 15px;
+    width: 50%;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: left;
+    height: auto;
+    font-weight: 300;
+}
+
+.form-container select {
+    background: #fafbfc;
+    border: 1px solid #e7e7e7;
+    margin: 13px auto;
+    padding: 15px;
+    width: 55%;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: left;
+    height: auto;
+    font-weight: 300;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #ccc;
+    background-color: #f9f9f9;
+}
+
+.button-next {
+    border: 0;
+    background: #039BE5; 
+    margin: 13px auto;
+    padding: 12px;
+    width: 55%;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.button-next:hover {
+    background: #17459E; 
+    transition: 0.3s ease-in-out;
+}
+
 
 @media (max-width: 800px) {
     html, body {
