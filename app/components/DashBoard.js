@@ -33,7 +33,7 @@ export default class DashBoard extends Component {
 
     render() {
         return (
-            <div>
+            <div className="content-wrapper">
                 {this.renderCards()}
             </div>
         );
