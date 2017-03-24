@@ -158,6 +158,7 @@ button:hover {
 
 /*side-nav*/
 .side-nav {
+    z-index: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.26);
     float: left;
     min-height: 678px;
@@ -191,6 +192,7 @@ button:hover {
 /*Filter dropdown content*/
 
 .filter-dropdown {
+    width: 100%;
     background-color: #f4f8f9;
 }
 
@@ -207,6 +209,7 @@ button:hover {
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    border-radius: 5px;
+   z-index: 2px;
 }
 
 .blue select { 
@@ -255,6 +258,7 @@ button:hover {
 
 .Table
     {
+        max-width: 100%;
         font-size: 14px;
         display: table;
         border: none;
@@ -275,6 +279,7 @@ button:hover {
 
     .Row
     {
+        max-width: 90%;
         display: table-row;
         background-color: #fafbfc;
     }
@@ -295,7 +300,12 @@ button:hover {
         color: #757E83;
     }
 
-/*End of table*/
+/*Query Form*/
+
+.form-container input {
+    border: none;
+
+}
 
 @media (max-width: 800px) {
     html, body {
