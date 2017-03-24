@@ -56,93 +56,21 @@ export default class Report extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="Table">
-                    <div className="Heading">
-                        <div className="Cell">
-                            <p>System ID</p>
-                        </div>
-                        <div className="Cell">
-                            <p>Query Type</p>
-                        </div>
-                        <div className="Cell">
-                            <p>Department</p>
-                        </div>
-                        <div className="Cell">
-                            <p>Year</p>
-                        </div>
-                        <div className="Cell">
-                            <p>Status</p>
-                        </div>
-                    </div>
-                    <div className="Row">
-                        <div className="Cell">
-                            <p>abc</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
+                <div className="Rtable Rtable--3cols">
+                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
+                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
+                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
+                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
 
-                    </div>
-                    <div className="Row">
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>          
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                    </div>
-                    <div className="Row">
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                    </div>
-                    <div className="Row">
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>          
-                        <div className="Cell">
-                            <p>xyz@xyz.com</p>
-                        </div>
-                    </div>
+                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
+                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
+                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
+                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
+
+                    <div className="Rtable-cell Rtable-cell-1"><h3>Eddard Stark</h3></div>
+                    <div className="Rtable-cell Rtable-cell-2">Has a sword named Ice</div>
+                    <div className="Rtable-cell Rtable-cell-3">No direwolf</div>
+                    <div className="Rtable-cell Rtable-cell-4"><strong>Lord of Winterfell</strong></div>
                 </div>
             </div>
         );
