@@ -1,20 +1,19 @@
 body{
-    padding: 100px;
-    padding-top: 100px;
     font-family: sans-serif;
     color: #424242;
     letter-spacing: 0.4px;
     background: #fff;
+    margin: 0px;
+    padding: 0px;
 }
 
 .content-wrapper{
     width: 100;
-    padding: 80px;
     padding-left: 160px;
+    padding-top: 80px;
     border: 1px solid e0e0e0;
     min-height: 678px;
     max-height: 1800px;
-    border-radius: 20px;
     padding-bottom: 100px;
     background-color: #fafbfc;
 }
@@ -61,7 +60,7 @@ body{
     width: 40px;
     height: 40px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 .person-name {
@@ -159,9 +158,6 @@ button:hover {
 
 /*side-nav*/
 .side-nav {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-left: 1px solid #e0e0e0;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.26);
     float: left;
     min-height: 678px;
@@ -256,12 +252,6 @@ button:hover {
         min-height: 1000px;
     }
 
-    .side-nav {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        min-height: 1180px;
-    }
-
     .content-wrapper {
         border-radius: 0px;
         min-height: 1000px;
@@ -285,33 +275,19 @@ button:hover {
     .content-wrapper{
         min-height: 2100px; 
     }
-    
-    .side-nav {
-        min-height: 1280px;
-        position: absolute;
-    }
 }
 
 @media (min-width: 956px) {
-    body {
-        padding-left: 100px;
-    }
+
     .content-wrapper {
         min-height: 1100px;
     }
 }
 
 @media (min-width: 1057px) {
-    body {
-        padding-left: 100px;
-    }
+
     .content-wrapper {
         min-height: 800px;
-    }
-
-    .side-nav {
-        min-height: 980px;
-        position: absolute;
     }
 }
 
