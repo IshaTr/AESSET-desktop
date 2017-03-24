@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { stringify } from 'querystring';
 
 export default class QueryForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
             student: '',
-            query_type: '',
+            query_type: 'result',
             email: '',
             phone: '',
             department: '',
             year: '',
-            status: '',
             description: ''
         };
 
@@ -29,8 +29,22 @@ export default class QueryForm extends Component {
             method: 'post',
             url: `http://localhost:8000/query/`,
             data: {
+                student : this.state.student,
+                query_type: this.state.query_type,
+                email: this.state.email,
+                phone: this.state.phone,
+                department: this.state.department,
+                year: this.state.year,
+                description: this.state.description
             }
         })
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
     }
 
     render() {
@@ -43,28 +57,28 @@ export default class QueryForm extends Component {
                 <input className="form__input" placeholder="Email" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                 <br />
                 <select className="form__input" placeholder="Query Type" type="text" name="query_type" value={this.state.query_type} onChange={this.handleChange}>
-                    <option>Result Discrepancy</option>
-                    <option>Credit Discrepancy</option>
-                    <option>PDC Issue</option>
-                    <option>Other Document Issue</option>
+                    <option value="result">Result Discrepancy</option>
+                    <option value="credit">Credit Discrepancy</option>
+                    <option value="pdc_issue">PDC Issue</option>
+                    <option value="other_certificate">Other Document Issue</option>
                 </select>
                 <br />
-                <select className="form__input" placeholder="Department" type="text" name="department" value={this.state.department} onChange={this.handleChange}>
-                    <option>CSE</option>
-                    <option>ME</option>
-                    <option>CE</option>
-                    <option>EEE</option>
-                    <option>Biotech</option>
+                <select value="" className="form__input" placeholder="Department" type="text" name="department" value={this.state.department} onChange={this.handleChange}>
+                    <option value="CSE">CSE</option>
+                    <option value="ME">ME</option>
+                    <option value="CE">CE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="BioTech">Biotech</option>
                 </select>
                 <br />
-                <select className="form__input" placeholder="Year" type="text" name="year" value={this.state.year} onChange={this.handleChange}>
-                    <option>1st</option>
-                    <option>2nd</option>
-                    <option>3rd</option>
-                    <option>4th</option>
+                <select value="" className="form__input" placeholder="Year" type="text" name="year" value={this.state.year} onChange={this.handleChange}>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                    <option value="4">4th</option>
                 </select>
                 <br />
-                <input className="form__input" placeholder="Description" type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
+                <input value="" className="form__input" placeholder="Description" type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
                 <br />
                 <button onClick={this.onSubmit} className="button button-next">Save</button>
             </div>
