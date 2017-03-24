@@ -10,7 +10,7 @@ import Report from './components/Report';
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={DashBoard} />
-        <Route path="queryform" component={QueryForm} />
-        <Route path="report" component={Report} />
+        <Route path="/queryform" component={QueryForm} />
+        <Route path="/report" component={Report} />
     </Route>
 );

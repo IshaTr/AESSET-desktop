@@ -46,6 +46,7 @@ export default class QueryForm extends Component {
                 <input className="form__input" placeholder="Description" type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
                 <button onClick={this.onSubmit} className="button button-next">Save</button>
             </div>
+            
         );
     }
 }
