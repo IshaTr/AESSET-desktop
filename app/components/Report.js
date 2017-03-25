@@ -72,16 +72,19 @@ export default class Report extends Component {
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
                             <select name="status" value={this.state.status} onChange={this.handleChange}>
-                                <option value="status">Status</option>
+                                <option value={undefined}>Select Status</option>
                                 <option value="resolved">Resolved</option>
                                 <option value="unresolved">Unresolved</option>
+                                <option value="pending">Pending</option>
+                                <option value="reschedule">Reschedule</option>
+                                <option value="transfer">Transfer</option>
                             </select>
                         </div>
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select value={this.state.department} onChange={this.handleChange}>
-                                <option>Select Department</option>
+                            <select name="department" value={this.state.department} onChange={this.handleChange}>
+                                <option value={undefined}>Select Department</option>
                                 <option value="CSE">CSE</option>
                                 <option value="ME">ME</option>
                                 <option value="CE">CE</option>
@@ -93,8 +96,8 @@ export default class Report extends Component {
                     </div>
                     <div className="dropdown">
                         <div className="styled-select blue semi-square">
-                            <select value={this.state.year} onChange={this.handleChange}>
-                                <option>Select Year</option>
+                            <select name="year" value={this.state.year} onChange={this.handleChange}>
+                                <option value={undefined}>Select Year</option>
                                 <option value="1">1st</option>
                                 <option value="2">2nd</option>
                                 <option value="3">3rd</option>

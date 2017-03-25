@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Card from './Card';
 
+let today = new Date().toISOString().slice(0, 10);
+
 export default class DashBoard extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +13,7 @@ export default class DashBoard extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8000/querylist/`)
+        axios.get(`http://localhost:8000/querylist/?date=${today}`)
             .then(response => {
                 this.setState({data: response.data});
             })
