@@ -23,13 +23,11 @@ export default class ListItem extends Component {
                             <span className="person__name">{data.token_id}</span>
                             <div><span className="person__ID">{data.student}</span></div>
                         </div>
-                    </div>                
-                </div>
-                <div className="content__query">
-                    <h4>{ data.query_type_value }</h4>
-                    <div className="query__text">{ data.description }</div>
-                </div>
-                <div className="content__footer">
+                    </div>
+                    <div className="content__query">
+                        <h4>{ data.query_type_value }</h4>
+                        <div className="query__text">{ data.description }</div>
+                    </div>
                     <div className="footer__button">
                         <button className="status-button" type="submit">
                             <div className="person-status">
@@ -44,6 +42,7 @@ export default class ListItem extends Component {
                             </div>
                         </button>
                     </div>
+                    
                 </div>
             </div>
         );
