@@ -13,21 +13,13 @@ export default class ListItem extends Component {
         return(    
             <div className="content-item">
                 <div className="content__person">
-                    <div className="person-image">
-                        <div className="image">
-                            <img src="./static/image/person-icon-8.png" alt="" />
-                        </div>
-                    </div>
                     <div className="person-name">
                         <div className="person">
                             <span className="person__name">{data.token_id}</span>
                             <div><span className="person__ID">{data.student}</span></div>
                         </div>
                     </div>
-                    <div className="content__query">
-                        <h4>{ data.query_type_value }</h4>
-                        <div className="query__text">{ data.description }</div>
-                    </div>
+                    
                     <div className="footer__button">
                         <button className="status-button" type="submit">
                             <div className="person-status">
