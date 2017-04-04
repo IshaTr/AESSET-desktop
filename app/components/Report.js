@@ -37,14 +37,13 @@ export default class Report extends Component {
         })
             .then(response => {
                 this.setState({data: response.data});
-                console.log(...(response.data));
             })
             .catch(function (errors) {
                 console.log(errors);
             });
     }
 
-    rendeResult = () => {
+    renderResult = () => {
         const { data } = this.state;
         if (data) {
             return data.map(query => (
@@ -112,7 +111,7 @@ export default class Report extends Component {
                     </div>
                 </div>
 
-                {this.rendeResult()}
+                {this.renderResult()}
             </div>
         );
     }

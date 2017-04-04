@@ -7,34 +7,38 @@ export default class SideNav extends Component {
             <div>
                 <div className="nav__add-query">
                     <Link to="/queryform">
-                        <i className="material-icons md-18 Grey500 icons">
-                            add_circle
-                        </i>
-                        <span>Add query</span>
+                        <div className="nav-icon">
+                            <i className="material-icons md-18 Grey500 icons">
+                                add_circle
+                            </i>
+                        </div>
+                        <div className="icon-name">
+                            <span>Add query</span>
+                        </div>
                     </Link>
                 </div>
                 <div className="nav__dashboard">
                     <Link to="/">
-                        <i className="material-icons md-18 Grey500 icons">
-                            library_books
-                        </i>
-                        <span>Report</span>
+                        <div className="nav-icon">
+                            <i className="material-icons md-18 Grey500 icons">
+                                library_books
+                            </i>
+                        </div>
+                        <div className="icon-name">
+                            <span>Report</span>
+                        </div>
                     </Link>
                 </div>
                 <div className="nav__resolved-query">
                     <Link to="/report">
-                        <i className="material-icons md-18 Grey500 icons">
-                            check_circle
-                        </i>
-                        <span>Filter</span>
-                    </Link>
-                </div>
-                <div className="nav__unresolved-query">
-                    <Link to="">
-                        <i className="material-icons md-18 Grey500 icons">
-                            clear
-                        </i>
-                        <span></span>
+                        <div className="nav-icon">
+                            <i className="material-icons md-18 Grey500 icons">
+                                check_circle
+                            </i>
+                        </div>
+                        <div className="icon-name">
+                            <span>Filter</span>
+                        </div>
                     </Link>
                 </div>
             </div>

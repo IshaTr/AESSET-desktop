@@ -9,33 +9,39 @@ export default class ListItem extends Component {
     }
 
     render() {
+        let queryDict = {
+            result: "Result Discrepency",
+            other_certificate: "Other certificate issue",
+            pdc_issue: "Issue of PDC",
+            credit: "Credit Discrepancy"
+        }
+        
         const { data } = this.state;
         return(    
             <div className="content-item">
                 <div className="content__person">
-                    <div className="person-name">
-                        <div className="person">
-                            <span className="person__name">{data.token_id}</span>
-                            <div><span className="person__ID">{data.student}</span></div>
+                    <div className="content-item">
+                            <div className="content__person">
+                                <div className="person-name">
+                                    <div className="person">
+                                        <span className="person-id">
+                                            {data.token_id}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="person-name">
+                                    <span className="">
+                                        {data.student}
+                                    </span>
+                                </div>
+                                <div className="person-name">
+                                    <span className="query-type">
+                                        {queryDict[data.query_type]}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div className="footer__button">
-                        <button className="status-button" type="submit">
-                            <div className="person-status">
-                                <i className="material-icons md-32 greenA400 icon">check_circle</i>
-                            </div>
-                        </button>
-                    </div>
-                    <div className="footer__button">
-                        <button className="status-button" type="submit">
-                            <div className="person-status">
-                                <i className="material-icons md-32 Orange500 icon">error</i>
-                            </div>
-                        </button>
-                    </div>
-                    
-                </div>
             </div>
         );
     }

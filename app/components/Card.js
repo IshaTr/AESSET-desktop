@@ -50,6 +50,13 @@ export default class Card extends Component {
         }
             
         const { data, formStatus } = this.state;
+        let status = data.status;
+        if(status === "unresolved") {
+            status = "resolved";
+        }
+        else {
+            status = "unresolved";
+        }
         return (
             <div>
             {
@@ -82,12 +89,12 @@ export default class Card extends Component {
                                 </div>
                             </div>
                             <div className="content__footer">
-                                <Toggle defaultChecked={(data.status === "resolved" ? true: false)} />
+                                <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
                             </div>
                             <div className="person-name" onClick={this.toggleForm}>
-                                <button className="edit-button" type="submit">
-                                    <span>Edit</span>
-                                </button>
+                                <i className="material-icons">
+                                    edit
+                                </i>
                             </div>
                         </div>
                     </div>

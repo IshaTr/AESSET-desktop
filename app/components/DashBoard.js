@@ -36,9 +36,25 @@ export default class DashBoard extends Component {
     render() {
         return (
             <div className="content-wrapper">
-                {this.renderCards()}
+                <div className="heading-container">
+                    <div className="person-name">
+                        <span>Token ID</span>
+                    </div>
+                    <div className="person-name">
+                        <span>System ID</span>
+                    </div>
+                    <div className="person-name">
+                        <span>Query Type</span>
+                    </div>
+                    <div className="person-name">
+                        <span className="span-status">Status</span>
+                    </div>
+                </div>
+                <div>
+                    {this.renderCards()}
+                </div>
             </div>
         );
     }
 
-}
+} 
