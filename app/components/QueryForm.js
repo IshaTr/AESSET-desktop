@@ -49,21 +49,21 @@ export default class QueryForm extends Component {
 
     render() {
         return (
-            <div className="form-container content-wrapper">
-                <input className="form__input" placeholder="System Id" type="text" name="student" value={this.state.student} onChange={this.handleChange} />
+            <div className="query-form-container">
+                <input className="query-form__input" placeholder="System Id" type="text" name="student" value={this.state.student} onChange={this.handleChange} />
                 <br />
-                <input className="form__input" placeholder="Phone Number" type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
+                <input className="query-form__input" placeholder="Phone Number" type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
                 <br />
-                <input className="form__input" placeholder="Email" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input className="query-form__input" placeholder="Email" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                 <br />
-                <select className="form__input" placeholder="Query Type" type="text" name="query_type" value={this.state.query_type} onChange={this.handleChange}>
+                <select className="query-form__input" placeholder="Query Type" type="text" name="query_type" value={this.state.query_type} onChange={this.handleChange}>
                     <option value="result">Result Discrepancy</option>
                     <option value="credit">Credit Discrepancy</option>
                     <option value="pdc_issue">PDC Issue</option>
                     <option value="other_certificate">Other Document Issue</option>
                 </select>
                 <br />
-                <select value="" className="form__input" placeholder="Department" type="text" name="department" value={this.state.department} onChange={this.handleChange}>
+                <select value="" className="query-form__input" placeholder="Department" type="text" name="department" value={this.state.department} onChange={this.handleChange}>
                     <option value="CSE">CSE</option>
                     <option value="ME">ME</option>
                     <option value="CE">CE</option>
@@ -71,14 +71,14 @@ export default class QueryForm extends Component {
                     <option value="BioTech">Biotech</option>
                 </select>
                 <br />
-                <select value="" className="form__input" placeholder="Year" type="text" name="year" value={this.state.year} onChange={this.handleChange}>
+                <select value="" className="query-form__input" placeholder="Year" type="text" name="year" value={this.state.year} onChange={this.handleChange}>
                     <option value="1">1st</option>
                     <option value="2">2nd</option>
                     <option value="3">3rd</option>
                     <option value="4">4th</option>
                 </select>
                 <br />
-                <input value="" className="form__input" placeholder="Description" type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
+                <input value="" className="query-form__input" placeholder="Description" type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
                 <br />
                 <button onClick={this.onSubmit} className="button button-next">Save</button>
             </div>

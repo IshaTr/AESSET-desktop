@@ -180,6 +180,15 @@ body{
     max-height: 60%;
 }
 
+.content__edit {
+  padding: 5px;
+    padding-top: 15px;
+    position: absolute;
+    margin-left: 85%;
+    float: left;
+    max-height: 60%;
+}
+
 .footer__button {
     position: relative;
     height: 50px;
@@ -226,25 +235,22 @@ body{
 }
 
 .nav__add-query {
-    margin-top: 20px;
+    margin-top: 150px;
 }
 
 .nav__dashboard, .nav__resolved-query, .nav__unresolved-query, .nav__add-query {
-    height: 80px;
-    width: 80px;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
     position: relative;
     float: left;
+    margin-bottom: 10px;
 }
 
 .nav__add-query a, .nav__resolved-query a , .nav__unresolved-query a, .nav__dashboard a {
     text-decoration: none;
-    font-size: 15px;
     color: #fff;
     width: 100%;
-}
-
-.nav__add-query span, .nav__resolved-query span, .nav__unresolved-query span, .nav__dashboard span {
-    padding-left: 10px;
 }
 
 .material-icons.md-18 { 
@@ -253,9 +259,32 @@ body{
 
 .icons {
     margin-left: 20px;
-    margin-top: 20px;
     color: #fff;
     width: 100%;
+    margin-top: 3px;
+}
+
+.nav-icon {
+  width: 10%;
+  float: left;
+}
+
+.icon-name {
+  margin: 0px;
+  width: 80%;
+  float: left;
+  padding-left: 12px;
+  font-weight: bold;
+}
+
+.sharda-logo {
+  align-items: center;
+}
+
+.sharda-logo img {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 27%;
 }
 
 /*Filter dropdown content*/
@@ -371,6 +400,40 @@ body{
 
 /*Query Form*/
 
+.query-form-container {
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    min-height: 100%;
+    padding-left: 10%;
+    margin-left: 20%;
+    border-radius: 5px;
+    padding: 100px 93px 60px 10%;
+    
+}
+
+.query-form-container input, .query-form-container select {
+    background: #fafbfc;
+    border: 1px solid #e7e7e7;
+    margin: 0px auto;
+    padding: 15px;
+    width: 60%;
+    color: #757575;
+    font-size: 16px;
+    text-align: left;
+    height: auto;
+    font-weight: 300;
+}
+
+.query-form-container select {
+  width: 64.3%;
+}
+
 .form-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,15 +442,23 @@ body{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    min-height: 570px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-left: 22%;
+    padding-left: 3%;
+    padding-bottom: 0;
+    border-radius: 5px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 .form-container input {
     background: #fafbfc;
     border: 1px solid #e7e7e7;
-    margin: 13px auto;
+    margin: 0px auto;
     padding: 15px;
-    width: 50%;
-    border-radius: 3px;
+    width: 60%;
+    color: #757575;
     font-size: 16px;
     text-align: left;
     height: auto;
@@ -397,10 +468,10 @@ body{
 .form-container select {
     background: #fafbfc;
     border: 1px solid #e7e7e7;
-    margin: 13px auto;
+    margin: 0px auto;
     padding: 15px;
-    width: 55%;
-    border-radius: 3px;
+    width: 66.4%;
+    color: #757575;
     font-size: 16px;
     text-align: left;
     height: auto;
@@ -415,18 +486,18 @@ body{
 
 .button-next {
     border: 0;
-    background: #039BE5; 
+    background: #17459E; 
     margin: 13px auto;
     padding: 12px;
-    width: 55%;
-    border-radius: 3px;
+    width: 60%;
     font-size: 20px;
     color: #fff;
     font-weight: 600;
 }
 
 .button-next:hover {
-    background: #17459E; 
+    cursor: pointer;
+    background: #039BE5; 
     -webkit-transition: 0.3s ease-in-out; 
     transition: 0.3s ease-in-out;
 }
@@ -461,12 +532,6 @@ body{
         min-height: 2100px;
     }
 }
-
-/*@media (min-width: 801px) {
-    .content-wrapper{
-        min-height: 2100px; 
-    }
-}*/
 
 .Rtable-cell-1 {
     -webkit-box-ordinal-group: 2;

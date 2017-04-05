@@ -5,6 +5,9 @@ export default class SideNav extends Component {
     render() {
         return (
             <div>
+                <div className="sharda-logo">
+                    <img src="./static/image/sharda.gif"/>
+                </div>
                 <div className="nav__add-query">
                     <Link to="/queryform">
                         <div className="nav-icon">
@@ -25,7 +28,7 @@ export default class SideNav extends Component {
                             </i>
                         </div>
                         <div className="icon-name">
-                            <span>Report</span>
+                            <span>Dashboard</span>
                         </div>
                     </Link>
                 </div>
@@ -37,7 +40,7 @@ export default class SideNav extends Component {
                             </i>
                         </div>
                         <div className="icon-name">
-                            <span>Filter</span>
+                            <span>Report</span>
                         </div>
                     </Link>
                 </div>

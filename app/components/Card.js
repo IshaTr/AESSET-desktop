@@ -91,7 +91,7 @@ export default class Card extends Component {
                             <div className="content__footer">
                                 <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
                             </div>
-                            <div className="person-name" onClick={this.toggleForm}>
+                            <div className="content__edit" onClick={this.toggleForm}>
                                 <i className="material-icons">
                                     edit
                                 </i>
