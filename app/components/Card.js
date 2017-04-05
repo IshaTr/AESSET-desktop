@@ -35,9 +35,9 @@ export default class Card extends Component {
             });
     }
 
-    toggleForm = () => {
+    toggleForm = (formStatus) => {
         this.setState({
-            formStatus: !this.state.formStatus
+            formStatus: formStatus
         });
     }
 
@@ -58,15 +58,6 @@ export default class Card extends Component {
             status = "unresolved";
         }
         return (
-            <div>
-            {
-                formStatus === true ? 
-                (<UpdateQueryForm 
-                    data={data} 
-                    key={data.token_id} 
-                    toggleForm={this.toggleForm} />
-                ) : 
-                (
                     <div>
                         <div className="content-item">
                             <div className="content__person">
@@ -91,16 +82,23 @@ export default class Card extends Component {
                             <div className="content__footer">
                                 <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
                             </div>
-                            <div className="person-name" onClick={this.toggleForm}>
-                                <i className="material-icons">
-                                    edit
-                                </i>
+                            <div className="person-name" onClick={() => this.toggleForm(true)}>
+                                <div> {
+                                    formStatus === true ? 
+                                    (<UpdateQueryForm 
+                                        data={data} 
+                                        key={data.token_id} 
+                                        toggleForm={() => this.toggleForm(false)} />
+                                    ): (
+                                        <i className="material-icons">
+                                            edit
+                                        </i>
+                                    )
+                                }
+                                </div>
                             </div>
                         </div>
                     </div>
-                )
-            }
-            </div>
-        );
+            );
     }
 }

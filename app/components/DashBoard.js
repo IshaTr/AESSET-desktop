@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Card from './Card';
 
-let today = new Date().toISOString().slice(0, 10);
+let today = new Date().toLocaleDateString('ko-KR').slice(0, 10).replace(/\. /g,"-");
 
 export default class DashBoard extends Component {
     constructor(props) {
