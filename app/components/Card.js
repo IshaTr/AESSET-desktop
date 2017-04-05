@@ -58,54 +58,45 @@ export default class Card extends Component {
             status = "unresolved";
         }
         return (
-                    <div>
-                        <div className="content-item">
-                            <div className="content__person">
-                                <div className="person-name">
-                                    <div className="person">
-                                        <span className="person-id">
-                                            {data.token_id}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="person-name">
-                                    <span className="">
-                                        {data.student}
-                                    </span>
-                                </div>
-                                <div className="person-name">
-                                    <span className="query-type">
-                                        {queryDict[data.query_type]}
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="content__footer">
-                                <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
-                            </div>
-<<<<<<< HEAD
-                            <div className="content__edit" onClick={this.toggleForm}>
-                                <i className="material-icons">
-                                    edit
-                                </i>
-=======
-                            <div className="person-name" onClick={() => this.toggleForm(true)}>
-                                <div> {
-                                    formStatus === true ? 
-                                    (<UpdateQueryForm 
-                                        data={data} 
-                                        key={data.token_id} 
-                                        toggleForm={() => this.toggleForm(false)} />
-                                    ): (
-                                        <i className="material-icons">
-                                            edit
-                                        </i>
-                                    )
-                                }
-                                </div>
->>>>>>> 999f5182986514dfdc14bcf5f38b45236f33473d
-                            </div>
+            <div className="content-item">
+                <div className="content__person">
+                    <div className="person-name">
+                        <div className="person">
+                            <span className="person-id">
+                                {data.token_id}
+                            </span>
                         </div>
                     </div>
-            );
+                    <div className="person-name">
+                        <span className="">
+                            {data.student}
+                        </span>
+                    </div>
+                    <div className="person-name">
+                        <span className="query-type">
+                            {queryDict[data.query_type]}
+                        </span>
+                    </div>
+                </div>
+                <div className="content__footer">
+                    <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
+                </div>
+                <div className="content__edit" onClick={() => this.toggleForm(true)}>
+                    <div> {
+                        formStatus === true ? 
+                        (<UpdateQueryForm 
+                            data={data} 
+                            key={data.token_id} 
+                            toggleForm={() => this.toggleForm(false)} />
+                        ): (
+                            <i className="material-icons">
+                                edit
+                            </i>
+                        )
+                    }
+                    </div>
+                </div>
+            </div>
+        );
     }
 }
