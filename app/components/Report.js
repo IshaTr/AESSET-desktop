@@ -14,7 +14,7 @@ export default class Report extends Component {
             status: undefined,
             department: undefined,
             status: undefined,
-            date: today,
+            date: moment(),
             data: []
         }
         this.handleChange = this.handleChange.bind(this);
@@ -26,19 +26,24 @@ export default class Report extends Component {
         })
     }
 
-    // handleDateChange = (date) => {
-    //     this.setState({
-    //         date: date
-    //     });
-    // }
+    handleDateChange = (date) => {
+        this.setState({
+            date: date
+        });
+    }
 
     onFilter = () => {
         const params = {};
-
+        var date = this.state.date;
+        var date = moment.utc(date).toDate();
         Object.keys(this.state).forEach((item) => {
-            if (item !== "data" && this.state[item]) {
+            if (item !== "data" && this.state[item] && item !== "date" ) {
                 params[item] = this.state[item];
             }
+            else if (item == "date") {
+                params["date"] = moment(date,"YYYY-MM-DD").format("YYYY-MM-DD");
+            }
+
         });
 
         axios.get(`http://localhost:8000/querylist/`,{
@@ -87,6 +92,14 @@ export default class Report extends Component {
                                 <option value="reschedule">Reschedule</option>
                                 <option value="transfer">Transfer</option>
                             </select>
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        <div className="styled-select blue semi-square">                    
+                            <DatePicker
+                            dateFormat="YYYY/MM/DD"
+                            selected={this.state.date}
+                            onChange={this.handleDateChange} />
                         </div>
                     </div>
                     <div className="dropdown">
