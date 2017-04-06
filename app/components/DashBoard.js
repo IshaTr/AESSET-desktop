@@ -13,7 +13,7 @@ export default class DashBoard extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8000/querylist/?date=${today}`)
+        axios.get(`http://localhost:8000/querylistfrom/?date=${today}`)
             .then(response => {
                 this.setState({data: response.data});
             })

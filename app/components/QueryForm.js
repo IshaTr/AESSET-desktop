@@ -57,6 +57,7 @@ export default class QueryForm extends Component {
                 <input className="query-form__input" placeholder="Email" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                 <br />
                 <select className="query-form__input" placeholder="Query Type" type="text" name="query_type" value={this.state.query_type} onChange={this.handleChange}>
+                    <option value={undefined}>Select Query type</option>
                     <option value="result">Result Discrepancy</option>
                     <option value="credit">Credit Discrepancy</option>
                     <option value="pdc_issue">PDC Issue</option>
@@ -64,6 +65,7 @@ export default class QueryForm extends Component {
                 </select>
                 <br />
                 <select value="" className="query-form__input" placeholder="Department" type="text" name="department" value={this.state.department} onChange={this.handleChange}>
+                    <option value={undefined}>Select Department</option>
                     <option value="CSE">CSE</option>
                     <option value="ME">ME</option>
                     <option value="CE">CE</option>
@@ -72,6 +74,7 @@ export default class QueryForm extends Component {
                 </select>
                 <br />
                 <select value="" className="query-form__input" placeholder="Year" type="text" name="year" value={this.state.year} onChange={this.handleChange}>
+                    <option value={undefined}>Select Year</option>
                     <option value="1">1st</option>
                     <option value="2">2nd</option>
                     <option value="3">3rd</option>

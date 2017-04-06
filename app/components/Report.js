@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import ListItem from './ListItem';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
-let today = new Date().toISOString().slice(0, 10);
+let today = new Date().toLocaleDateString('ko-KR').slice(0, 10).replace(/\. /g,"-");
 
 export default class Report extends Component {
     constructor(props) {
@@ -24,8 +26,15 @@ export default class Report extends Component {
         })
     }
 
+    // handleDateChange = (date) => {
+    //     this.setState({
+    //         date: date
+    //     });
+    // }
+
     onFilter = () => {
         const params = {};
+
         Object.keys(this.state).forEach((item) => {
             if (item !== "data" && this.state[item]) {
                 params[item] = this.state[item];
@@ -110,7 +119,6 @@ export default class Report extends Component {
                         </div>
                     </div>
                 </div>
-
                 {this.renderResult()}
             </div>
         );
