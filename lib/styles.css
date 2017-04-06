@@ -181,11 +181,10 @@ body{
 }
 
 .content__edit {
-  padding: 5px;
+    padding: 5px;
     padding-top: 15px;
-    position: absolute;
-    margin-left: 85%;
-    float: left;
+    position: relative;
+    float: right;
     max-height: 60%;
 }
 
@@ -443,9 +442,9 @@ body{
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 570px;
-    width: 50%;
+    width: 100%;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.8);
-    margin-left: 22%;
     padding-left: 3%;
     padding-bottom: 0;
     border-radius: 5px;
@@ -470,7 +469,7 @@ body{
     border: 1px solid #e7e7e7;
     margin: 0px auto;
     padding: 15px;
-    width: 66.4%;
+    width: 72.3%;
     color: #757575;
     font-size: 16px;
     text-align: left;
