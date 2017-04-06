@@ -35,7 +35,7 @@ export default class Report extends Component {
     onFilter = () => {
         const params = {};
         var date = this.state.date;
-        var date = moment.utc(date).toDate();
+
         Object.keys(this.state).forEach((item) => {
             if (item !== "data" && this.state[item] && item !== "date" ) {
                 params[item] = this.state[item];
