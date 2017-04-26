@@ -8,11 +8,16 @@ export default class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: this.props.data,
+            data: props.data,
             formStatus: false
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            data: nextProps.data
+        });
+    }
 
     toggleStatus = (status) => {
         axios({
@@ -35,9 +40,12 @@ export default class Card extends Component {
             });
     }
 
-    toggleForm = (formStatus) => {
+    toggleForm = (data) => {
+        if (data) {
+           this.props.updateData(data);
+        }
         this.setState({
-            formStatus: formStatus
+            formStatus: !this.state.formStatus
         });
     }
 
@@ -79,19 +87,21 @@ export default class Card extends Component {
                     </div>
                 </div>
                 <div className="content__footer">
-                    <Toggle defaultChecked={(data.status === "resolved" ? true: false)} onClick={() => this.toggleStatus(status)}/>
+                    <Toggle checked={(data.status === "resolved" ? true : false)} onChange={() => this.toggleStatus(status)}/>
                 </div>
-                <div className="content__edit" onClick={() => this.toggleForm(true)}>
+                <div className="content__edit">
                     <div> {
                         formStatus === true ? 
                         (<UpdateQueryForm 
                             data={data} 
                             key={data.token_id} 
-                            toggleForm={() => this.toggleForm(false)} />
+                            toggleForm={this.toggleForm} />
                         ): (
-                            <i className="material-icons">
-                                edit
-                            </i>
+                            <div onClick={() => this.toggleForm()}>
+                                <i className="material-icons">
+                                    edit
+                                </i>
+                            </div>
                         )
                     }
                     </div>

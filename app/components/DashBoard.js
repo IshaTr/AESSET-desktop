@@ -20,17 +20,31 @@ export default class DashBoard extends Component {
             .catch(function (errors) {
                 console.log(errors);
             });
+        console.log("called");
     }
 
     renderCards() {
         const { data } = this.state;
         if (data.length) {
             return data.map(card => (
-                <Card data={card} key={card.token_id} />
+                <Card data={card} key={card.token_id} updateData={this.updateData} />
             ));
         }
 
         return null;
+    }
+
+    updateData = (data) => {
+        const newData = this.state.data.map(item => {
+            if (item.token_id === data.token_id) {
+                item = data;
+            }
+            return item;
+        });
+
+        this.setState({
+            data: newData
+        });
     }
 
     render() {

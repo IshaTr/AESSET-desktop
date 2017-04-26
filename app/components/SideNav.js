@@ -16,7 +16,7 @@ export default class SideNav extends Component {
                             </i>
                         </div>
                         <div className="icon-name">
-                            <span>Add query</span>
+                            <span>Add Query</span>
                         </div>
                     </Link>
                 </div>

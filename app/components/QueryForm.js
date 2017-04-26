@@ -39,12 +39,12 @@ export default class QueryForm extends Component {
             }
         })
         .then((response) => {
-            console.log(response);
+            hashHistory.push('/');
         })
         .catch((error) => {
             console.log(error);
+            hashHistory.push('/');
         });
-        hashHistory.push('/');
     }
 
     render() {
