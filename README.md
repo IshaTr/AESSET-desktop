@@ -14,9 +14,9 @@ sudo yarn
 #### To run
 
 ```
-$npm run script
+$yarn run script
 # Open another tab of terminal
-$npm start
+$yarn start
 ```
 
 #### Note:
