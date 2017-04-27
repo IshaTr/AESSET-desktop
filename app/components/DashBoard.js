@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Card from './Card';
 
-let today = new Date().toLocaleDateString('ko-KR').slice(0, 10).replace(/\. /g,"-");
+let today = new Date().toISOString().slice(0,10);;
 
 export default class DashBoard extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class DashBoard extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8000/querylistfrom/?date=${today}`)
+        axios.get(`http://localhost:8000/querylistform/?date=${today}`)
             .then(response => {
                 this.setState({data: response.data});
             })
