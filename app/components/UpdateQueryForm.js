@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { hashHistory } from 'react-router';
 
+import Phone from 'react-phone-number-input';
+
 export default class QueryForm extends Component {
     constructor(props) {
         super(props);
@@ -45,13 +47,11 @@ export default class QueryForm extends Component {
                         value={data.student === "" ? undefined : data.student}
                         onChange={this.handleChange} />
 
-                    <input 
-                        className="form__input"
-                        placeholder="phone"
-                        type="text"
-                        name="phone" 
-                        value={data.phone === "" ? undefined : data.phone}
-                        onChange={this.handleChange} />
+                    <Phone
+                    placeholder="Enter phone number"
+                    onChange={ phone => this.setState({ phone }) }
+                    value={data.phone === "" ? undefined : data.phone}
+                     />
                     <input 
                         className="form__input"
                         placeholder="email"
